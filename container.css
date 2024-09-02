@@ -1,0 +1,119 @@
+html, 
+body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: grid;
+  place-items: center;
+  background-color: rgb(244, 234, 226);
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(5,1fr);
+  background-color: white;
+  height: 400px;
+  width: 550px;
+  border-radius: 10px;
+  grid-template-areas: 
+  "     pic     cat     "
+  "     pic     name     "
+  "     pic     .     "
+  "     pic     .     "
+  "     pic     .     "
+  ;
+}
+.product-pic-container{
+  grid-area: pic;
+}
+.product-pic{
+ height: 400px;
+object-fit: contain;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+.product-cat{
+  grid-area: cat;
+  align-self: center;
+  padding-left: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: .65rem;
+  letter-spacing: 5px;
+  color: grey;
+  margin-bottom: 0;
+}
+.product-name{
+  grid-area: name;
+  padding-left: 25px;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: bold;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+    font-size: 1.8rem;
+    width: 180px;
+    line-height: 27px;
+    margin-bottom: 0;
+    margin-top: -10px;
+}
+.product-desc{
+  color: rgb(128, 128, 128);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 25px;
+  margin-top: 25px;
+  font-size: .75rem;
+  line-height: 20px;
+  text-align: left;
+  width: 170px;
+}
+.price{
+  padding-left: 25px;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+    font-size: 1.7rem;
+    color: rgb(69, 131, 110);
+    margin-top: 25px;
+}
+.old-price{
+  text-decoration: line-through;  
+  color: grey;
+  font-size: .7rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; 
+  padding-left: 10px;
+  
+}
+.cart-button{
+  padding: 13px 60px 13px 60px;
+  margin-left: 25px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  border: none;
+  background-color: rgb(69, 131, 110);
+  border-radius: 5px;
+  font-size: .75rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.cart-button:hover{
+  opacity: 0.9;
+}
